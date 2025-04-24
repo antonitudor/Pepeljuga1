@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Čišćenje Pepeljuga</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="loading-screen">
+            <img src="https://www.dropbox.com/scl/fi/soudc41wnjq3cwmmtu5sa/logo.jpg?rlkey=chso7zfazidn2qjg2hmp0pbw7&st=c4wnsj9m&raw=1" alt="Company Logo" class="loading-logo">
+            <p style="position: absolute; bottom: 20px; font-size: 15px; color: #333;">
+                Designed by <a href="mailto:antoni.webdesign@gmail.com" style="color: #333;">Antoni Tudor</a>
+            </p>
+        </div>
+        <header>
+            <img src="https://www.dropbox.com/scl/fi/lkhmfqj32udlyigb7mbng/ikona.png?rlkey=ylo8l4yyco5yznv170t5tebw4&st=v4t9e7cv&raw=1" alt="Dizajner" class="designer-icon" onclick="toggleDesignerCard()">
+            <h1>Servis za čišćenje Pepeljuga</h1>
+            <p>Vaša čistoča, naša strast</p>
+            <meta name="description" content="Profesionalni servis za čišćenje u Splitu. Brzo, kvalitetno i povoljno!">
+            <meta name="keywords" content="čišćenje Split, servis za čišćenje Split, Pepeljuga čišćenje, dubinsko čišćenje, pranje tepiha Split">
+            <meta name="author" content="Servis za čišćenje Pepeljuga">
+
+            <nav>
+                <ul>
+                    <li><a href="#about">O nama</a></li>
+                    <li><a href="#services">Usluge</a></li>
+                    <li><a href="#flip-gallery">Prije i Poslije</a></li>
+                    <li><a href="#gallery">Galerija</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                    <li><a href="javascript:openReviews()">Recenzije</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- Reviews Modal -->
+            <div id="reviews-modal" class="reviews-modal">
+                <div class="modal-content">
+                    <span class="close-modal" onclick="closeReviews()">&times;</span>
+                    <h2>Recenzije</h2>
+                    <div class="review-list">
+                        <div class="review">
+                        <p>"Odlična usluga, vrlo profesionalno čišćenje. Sve preporuke!"<br><strong>- Ivan</strong></p>
+                        </div>
+                        <div class="review">
+                        <p>"Preporučujem svakome – temeljito i brzo čišćenje, uvijek zadovoljni rezultat!"<br><strong>- Marija</strong></p>
+                        </div>
+                        <div class="review">
+                        <p>"Usluga je besprijekorna, detaljno i s puno ljubavi prema poslu."<br><strong>- Marko</strong></p>
+                        </div>
+                        <div class="review">
+                        <p>"Sve je bilo savršeno! Naša kuhinja sada izgleda kao nova."<br><strong>- Ana</strong></p>
+                        </div>
+                        <div class="review">
+                        <p>"Izvrsna pažnja prema detaljima i vrlo ljubazno osoblje."<br><strong>- Petra</strong></p>
+                        </div>
+                        <div class="review">
+                        <p>"Nakon čišćenja kupaonice, ostala sam bez riječi. Hvala vam puno!"<br><strong>- Katarina</strong></p>
+                        </div>
+                        <div class="review">
+                        <p>"Vrlo profesionalni i točni. Svakako ću ponovno koristiti vaše usluge."<br><strong>- Josip</strong></p>
+                        </div>
+                        <div class="review">
+                        <p>"Fantastičan tim, sve odrađeno na vrijeme i vrlo uredno."<br><strong>- Luka</strong></p>
+                        </div>
+                        <div class="review">
+                        <p>"Moja terasa nikada nije izgledala ovako čisto. Hvala vam!"<br><strong>- Martina</strong></p>
+                        </div>
+                        <div class="review">
+                        <p>"Vi ste najbolji servis za čišćenje s kojim sam surađivao!"<br><strong>- Davor</strong></p>
+                        </div>
+                        <a href="https://www.google.com/search?client=safari&sca_esv=e3144f6254eef5eb&rls=en&tbm=
+                        lcl&sxsrf=AHTn8zrIoiXQ3mvvwd47B89Kg1bm_vpLdg:1740482612410&q=Servis+za+%C4%8Di%C5%A1%C4%87enje+
+                        Pepeljuga+Recenzije&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNLQ0MDA3MDQxMjM1NjC1MDA1MtrAyPiKUTM4tagss1ihKlHhSG_
+                        m0YVH2lPzslIVAlILUnOyStMTFYJSk1PzqjKzUhexEq8WADin_1FzAAAA&rldimm=11900701426530580522&hl=hr-HR&sa=X&ved=2ahUKEwjOmOb-
+                        2t6LAxXk7LsIHZl-CMUQ9fQKegQINxAF&biw=1680&bih=947&dpr=2#lkt=LocalPoiReviews" target="_blank">
+                            <button>Napišite nam i Vi recenziju</button>
+                        </a>                   
+                        <h5>pritisnite tipku</h5>     
+                    </div>
+                </div>
+            </div>
+
+
+        <div class="designer-card" id="designerCard">
+            <button class="close-btn" onclick="toggleDesignerCard()">✖</button>
+            <h2>Dizajnirao:</h2>
+            <p><strong>Antoni Tudor</strong></p>
+            <p>Web dizajn & razvoj</p>
+            <p>📧 <a href="mailto:antoni.webdesign@gmail.com"><button>Email</button></a></p>
+        </div>
+        <p>
+            <img src="https://www.dropbox.com/scl/fi/1u0ut82ztmatm19b2tprr/princeza.jpg?rlkey=nxqv91epixyi8xvl7ov9b6770&st=hpbacv0x&raw=1" class="center-image" >
+        </p>
+        <button onclick="topFunction()" id="myBtn" title="Go to top">
+            <img src="https://www.dropbox.com/scl/fi/k8g8q3le9e63j5huhew85/backtotop.png?rlkey=q5cz6aj2enu3cgyp0pfsizaar&st=5cxdubst&raw=1" alt="Back to Top">
+        </button>
+        <section class="hero">
+            <h2>Dobrodošli</h2>
+            <h3>Otkrijte što Vam nudimo</h3>
+            <a href="#services" class="cta-btn">Saznajte više</a>
+        </section>        
+        <section id="about" class="about">
+            <h2>O nama</h2>
+            <p>
+                Dobrodošli u Čišćenje Pepeljuga, profesionalnu tvrtku za čišćenje sa sjedištem u Splitu koja već 17 godina pruža vrhunske usluge čišćenja domova, brodova, stubišta, poslovnih prostora, te dubinsko usisavanje i pranje tapeta i tapeciranog namještaja.
+                Naš iskusni tim koristi provjerene metode i profesionalna sredstva za čišćenje kako bi osigurali besprijekornu čistoću i svježinu svakog prostora.
+                S naglaskom na kvalitetu, profesionalnost, diskreciju i detaljno čišćenje, naš cilj je potpuno zadovoljstvo klijenata. 
+                Bilo da trebate redovno ili jednokratno čišćenje, <br><b> Pepeljuga je tu da vaš prostor zablista</b>
+            </p>
+        </section> 
+
+        <!-- Slideshow Section -->
+        <section class="slideshow-container">
+            <div class="slideshow">
+                <img src="https://www.dropbox.com/scl/fi/39nmm4jjdsn77csireypm/img1.jpg?rlkey=m0feoadlwajdaq1gkx21l1mx3&st=2qtwfewc&raw=1">
+                <img src="https://www.dropbox.com/scl/fi/i2c2fl55gf33zsp7z8sks/afb826b0-7393-474a-b3c1-646ee770dba5-2.JPG?rlkey=roqwp2c2mju2kfyymb0d73ioz&st=lvyz4nya&raw=1">
+                <img src="https://www.dropbox.com/scl/fi/hp41jt9sc0cnnbq5rlbya/030.JPG?rlkey=juxbthpcm5qlwlaon2qsft5md&st=p0ty1ib0&raw=1">
+                <img src="https://www.dropbox.com/scl/fi/ncn4rnk89betifo18skwg/kupatilo_poslije.jpg?rlkey=tu5o6j1qb21catg1jwm5kwk8o&st=0naypwnk&raw=1">
+                <img src="https://www.dropbox.com/scl/fi/x52a1jzva06x1dhhfpnpo/spaher_poslije.jpg?rlkey=2tplpbwi9ztjjuncbdche3ew0&st=79cot0e0&raw=1">
+                <img src="https://www.dropbox.com/scl/fi/1gw2t4h7q0mh3cukcjvcv/balkon_poslije.JPG?rlkey=7uu1lvwm45t7c2pawfp83cfvn&st=evdb2p5n&raw=1">
+                <img src="https://www.dropbox.com/scl/fi/i3vtmt2k4wx3g21xd4ie6/sudoper_poslije.jpg?rlkey=eefwcm61y9um054agigtrct6v&st=6z4rjr52&raw=1">
+                <img src="https://www.dropbox.com/scl/fi/s41aelg5he13wa49v0qo2/198.JPG?rlkey=q0edx8547t4q4nf8hnsauexub&st=707zlk6k&raw=1">
+                <img src="https://www.dropbox.com/scl/fi/e57u5ene0i1myzv7rb2v7/142.JPG?rlkey=ftw41m2zlnkwn527awv0nofmt&st=opf6lnt3&raw=1">
+            </div>
+            <div class="timer-container">
+                <div class="timer-bar"></div>
+            </div>
+        </section>
+
+        <h2>Naše usluge</h2>
+
+        <section id="services">
+            <div class="service-list">
+                <div class="service" onclick="toggleMenu('service1')">
+                    <h3>Dubinsko čiščenje</h3>
+                </div>
+                <div class="service-menu" id="service1">
+                    <p>
+                        <p><li>Dubinsko usisavanje</li></p>
+                        <p><li>Dubinsko pranje tapeciranog namještaja i tapeta</li></p>
+                        <div class="service-menu-image-container">
+                            <img src="https://www.dropbox.com/scl/fi/rue9zr2s1kyxvk7ym81o6/PHOTO-2025-03-01-17-27-00.jpg?rlkey=xfjxif9ziuqzhke8svziuleed&st=79584359&raw=1" alt="Dubinsko čiščenje 3" class="service-menu-image">
+                            <img src="https://www.dropbox.com/scl/fi/tx124im3vsqgylcek2nil/b55ae2b1-8f54-4faf-bca6-3f9d7f98e6e9.JPG?rlkey=a34xcjjpd0xml38ow4ooyrf8j&st=obq5n5pj&raw=1" alt="Dubinsko čiščenje 3" class="service-menu-image">
+                        </div><br>
+                    </p>
+                    <button onclick="closeMenu('service1')">Zatvori</button>
+                </div>
+                <div class="service" onclick="toggleMenu('service2')">
+                    <h3>Čišćenje stanova</h3>
+                </div>
+                <div class="service-menu" id="service2">
+                    <p>
+                        <h2>Čiščenje stanova</h2>
+                        <p><li>generalno</li></p>
+                        <p><li>jednokratno</li></p>
+                        <p><li>periodično</li></p>
+                        <div class="service-menu-image-container">
+                            <img src="https://www.dropbox.com/scl/fi/5o77waidnmuok6x18gdj1/412b4c7a-4689-43f4-a1c3-66c75742e6da-2.JPG?rlkey=xkdv8aykvym7zenuk7hy0wxr3&st=v2ayk3ox&raw=1" alt="Dubinsko čiščenje 2" class="service-menu-image">
+                            <img src="https://www.dropbox.com/scl/fi/7cdgzx33v8c5k2baxu3k4/53ea1a1e-2a4d-4da5-b341-ca7eb46f4c15-2.JPG?rlkey=1yqry24zt3hzmjhp3v7dispuf&st=gzfe2wbf&raw=1" alt="Dubinsko čiščenje 3" class="service-menu-image">
+                        </div>
+                    </p><br>
+                    <button onclick="closeMenu('service2')">Zatvori</button>
+                </div>
+                <div class="service" onclick="toggleMenu('service3')">
+                    <h3>Čišćenje uredskih prostora</h3>
+                </div>
+                <div class="service-menu" id="service3">
+                    <p>
+                        <h2>čišćenje poslovnih prostora</h2>
+                        <p><li>generalno</li></p>
+                        <p><li>jednokratno</li></p>
+                        <p><li>periodično</li></p>
+                        <div class="service-menu-image-container">
+                            <img src="https://www.dropbox.com/scl/fi/2s0u77h29vfh3i4oaoneo/019.JPG?rlkey=ap9snfybvx96c048g4sf9wmls&st=9u7ze0v9&raw=1" alt="Dubinsko čiščenje 1" class="service-menu-image">
+                            <img src="https://www.dropbox.com/scl/fi/k6s227uzbya7696pytdez/266.JPG?rlkey=532hovjwlkemj5b2z9i9fanfv&st=woamnql4&raw=1" alt="Dubinsko čiščenje 2" class="service-menu-image">
+                        </div>
+                    </p><br>
+                    <button onclick="closeMenu('service3')">Zatvori</button>
+                </div>
+                <div class="service" onclick="toggleMenu('service4')">
+                    <h3>Čišćenje stubišta</table></h3>
+                </div>
+                <div class="service-menu" id="service4">
+                    <p>
+                        <h2>Čišćenje stubišta</h2>
+                        <div class="service-menu-image-container">
+                            <img src="https://www.dropbox.com/scl/fi/9e1liuv1wey15tqvk3gim/035.JPG?rlkey=xakzc37uzy55ys2ldeggwuizr&st=cuxa59g5&raw=1" alt="Dubinsko čiščenje 1" class="service-menu-image">
+                            <img src="https://www.dropbox.com/scl/fi/orow95szmsi45yflcyvjl/026.JPG?rlkey=1akt4sepojxwia0p7yud2nndx&st=1kstb5rh&raw=1" alt="Dubinsko čiščenje 2" class="service-menu-image">
+                        </div>
+                    </p><br>
+                    <button onclick="closeMenu('service4')">Zatvori</button>
+                </div>
+                
+                <div class="service" onclick="toggleMenu('service5')">
+                    <h4>Čišćenje nakon građevinskih radova</h4>
+                </div>
+                <div class="service-menu" id="service5">
+                    <p>
+                        <h2>Čišćenje nakon građevinskih radova</h2>
+                        <div class="service-menu-image-container">
+                            <img src="https://www.dropbox.com/scl/fi/zsj97g4exprjegwqy1tp5/Slika-zaslona-2025-03-19-u-14.24.52.png?rlkey=iwoq5wmugaf24f03babligqtq&st=cwy2ekrg&raw=1" alt="Dubinsko čiščenje 1" class="service-menu-image">
+                            <img src="https://www.dropbox.com/scl/fi/57rol3r19odx2qylr5ype/Slika-zaslona-2025-03-19-u-14.34.40.png?rlkey=wcpf5ikjbk69zumml6ywfwah0&st=f230t58g&raw=1" alt="Dubinsko čiščenje 3" class="service-menu-image">
+                        </div>
+                    </p><br>
+                    <button onclick="closeMenu('service5')">Zatvori</button>
+                </div>
+                
+                <div class="service" onclick="toggleMenu('service6')">
+                    <h4>Čišćenje plovila</h4>
+                </div>
+                <div class="service-menu" id="service6">
+                    <p>
+                        <h2>Čišćenje plovila</h2>
+                        <div class="service-menu-image-container">
+                            <img src="https://www.dropbox.com/scl/fi/cr8h03ttj3afal4tgq3w4/brod8.JPG?rlkey=6itlme6p3hxauufpr4rjrpqzf&st=trcy4456&raw=1" alt="Dubinsko čiščenje 1" class="service-menu-image">
+                            <img src="https://www.dropbox.com/scl/fi/k82ynt5finpmt4fnhhgps/brod7.JPG?rlkey=7ql9zpgde7mn511eaupxt3hhy&st=pk11gva2&draw=1" alt="Dubinsko čiščenje 2" class="service-menu-image">
+                            <img src="https://www.dropbox.com/scl/fi/pb9uscn9fo77j3asnwoqe/brod1.JPG?rlkey=bp28qkuiocdayi47nedcwgc7j&st=b7e7t5hi&raw=1" alt="Dubinsko čiščenje 3" class="service-menu-image">
+                        </div>
+                    </p><br>
+                    <button onclick="closeMenu('service6')">Zatvori</button>
+                </div>
+
+                <div class="service" onclick="toggleMenu('service7')">
+                    <h4>Usluge peglanja odjeće</h4>
+                </div>
+                <div class="service-menu" id="service7">
+                    <p>
+                        <h2>usluge peglanja odjeće</h2>
+                        <div class="service-menu-image-container">
+                        </div>
+                    </p><br>
+                    <button onclick="closeMenu('service7')">Zatvori</button>
+                </div>
+        </section>
+
+        <section id="auto-flip-gallery">
+            <div class="auto-flip-gallery">
+                <div class="flip-card">
+                    <div class="flip-inner">
+                        <div class="flip-front-face">
+                            <img src="https://www.dropbox.com/scl/fi/0iww6onle9hr5spd47z03/pecnica_prije.jpg?rlkey=bfoia6jks9qxt5k51wmnkfbxw&st=zrwjxtwe&raw=1" alt="Before Cleaning 1">
+                            <span class="flip-label">Prije</span>
+                        </div>
+                        <div class="flip-back-face">
+                            <img src="https://www.dropbox.com/scl/fi/hrllea06li7iddfhlzs12/pecnica_poslije.jpg?rlkey=5hi1hotmydf20o1a5334hb0mk&st=77lbybs8&raw=1" alt="After Cleaning 1">
+                            <span class="flip-label">Poslije</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-inner">
+                        <div class="flip-front-face">
+                            <img src="https://www.dropbox.com/scl/fi/nzpa8o2qlb4xcncr9oj1x/balkon_prije.JPG?rlkey=2daofr025stqq1y5mzo8q7w5w&st=2g383i9a&raw=1" alt="Before Cleaning 2">
+                            <span class="flip-label">Prije</span>
+                        </div>
+                        <div class="flip-back-face">
+                            <img src="https://www.dropbox.com/scl/fi/1gw2t4h7q0mh3cukcjvcv/balkon_poslije.JPG?rlkey=7uu1lvwm45t7c2pawfp83cfvn&st=evdb2p5n&raw=1" alt="After Cleaning 2">
+                            <span class="flip-label">Poslije</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-inner">
+                        <div class="flip-front-face">
+                            <img src="https://www.dropbox.com/scl/fi/z0pnwx7e93wtmyz6975ay/roletne_prije.jpg?rlkey=yz1wmc5vjc0xh05uwmo6j2sjy&st=kvfarx47&raw=1" alt="Before Cleaning 2">
+                            <span class="flip-label">Prije</span>
+                        </div>
+                        <div class="flip-back-face">
+                            <img src="https://www.dropbox.com/scl/fi/7hbkduarh5nkzlpw97ewa/roletne_poslije.jpg?rlkey=gh9w1tl08w6easike675ojdgs&st=vvtz3kpf&raw=1" alt="After Cleaning 2">
+                            <span class="flip-label">Poslije</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-inner">
+                        <div class="flip-front-face">
+                            <img src="https://www.dropbox.com/scl/fi/jlaxd9fa0ibny8g8vitxk/prozor_prije.png?rlkey=gg0v9i5a0uct6osx4aunv0hh9&st=lcg5ora6&raw=1" alt="Before Cleaning 2">
+                            <span class="flip-label">Prije</span>
+                        </div>
+                        <div class="flip-back-face">
+                            <img src="https://www.dropbox.com/scl/fi/uaenr90gove1xzcp1o379/prozor_poslije.png?rlkey=wrilqa6e5o5drk9xm681h2q64&st=bp8yui9s&raw01" alt="After Cleaning 2">
+                            <span class="flip-label">Poslije</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-inner">
+                        <div class="flip-front-face">
+                            <img src="https://www.dropbox.com/scl/fi/2uhgtte6w6uuczu9qiksp/frizider_prije.jpg?rlkey=o2x1vhdn4lkprm1fod6o88jaz&st=vpzq2tgb&raw=1" alt="Before Cleaning 2">
+                            <span class="flip-label">Prije</span>
+                        </div>
+                        <div class="flip-back-face">
+                            <img src="https://www.dropbox.com/scl/fi/vlrbg6jf1yp9xw826x988/frizider_poslije.jpg?rlkey=6yxmbkfqqrvyr1cg0srnsrcsv&st=dhtao7ot&raw=1" alt="After Cleaning 2">
+                            <span class="flip-label">Poslije</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-inner">
+                        <div class="flip-front-face">
+                            <img src="https://www.dropbox.com/scl/fi/61nlh90iwylqarfiz2gbg/spina_prije.jpg?rlkey=7nr36gqdo1zzlmcebn31ygvyg&st=0desclba&raw=1" alt="Before Cleaning 2">
+                            <span class="flip-label">Prije</span>
+                        </div>
+                        <div class="flip-back-face">
+                            <img src="https://www.dropbox.com/scl/fi/809scv8k9swdjkuuzw6z1/spina_poslije.jpg?rlkey=5rpmtlu39mywbfz6qntee85l6&st=9edab265&raw=1" alt="After Cleaning 2">
+                            <span class="flip-label">Poslije</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add additional flip cards as needed -->
+            </div>
+        </section>
+        <h2><b>Prije i Poslje čišćenja</b></h2>
+        <h3>Pritisnite sliku</h3>
+        <br>
+        <section id="flip-gallery">
+            <div class="flip-gallery">
+                <div class="flip-container" onclick="flipCard(this)">
+                    <div class="flip-box">
+                        <div class="flip-front">
+                            <img src="https://www.dropbox.com/scl/fi/9ulaylqyzca6ika4kmakt/sudoper_prije.jpg?rlkey=9tovh766o6jepxvfxfuzimk5l&st=oj3qmrzc&raw=1" alt="Before Cleaning 1">
+                            <span class="label">Prije</span>
+                        </div>
+                        <div class="flip-back">
+                            <img src="https://www.dropbox.com/scl/fi/i3vtmt2k4wx3g21xd4ie6/sudoper_poslije.jpg?rlkey=eefwcm61y9um054agigtrct6v&st=6z4rjr52&raw=1" alt="After Cleaning 1">
+                            <span class="label">Poslije</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-container" onclick="flipCard(this)">
+                    <div class="flip-box">
+                        <div class="flip-front">
+                            <img src="https://www.dropbox.com/scl/fi/61nlh90iwylqarfiz2gbg/spina_prije.jpg?rlkey=7nr36gqdo1zzlmcebn31ygvyg&st=0desclba&raw=1" alt="Before Cleaning 2">
+                            <span class="label">Prije</span>
+                        </div>
+                        <div class="flip-back">
+                            <img src="https://www.dropbox.com/scl/fi/809scv8k9swdjkuuzw6z1/spina_poslije.jpg?rlkey=5rpmtlu39mywbfz6qntee85l6&st=9edab265&raw=1" alt="After Cleaning 2">
+                            <span class="label">Poslije</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-container" onclick="flipCard(this)">
+                    <div class="flip-box">
+                        <div class="flip-front">
+                            <img src="https://www.dropbox.com/scl/fi/lcktlo3r4p76rhuthnl8n/Slika-zaslona-2025-03-19-u-14.30.25.png?rlkey=mc3izzfhlp83ycakupehr9o3e&st=m6kcvcof&raw=1" alt="Before Cleaning 2">
+                            <span class="label">Prije</span>
+                        </div>
+                        <div class="flip-back">
+                            <img src="https://www.dropbox.com/scl/fi/99t29g0x7st40xszv2eed/Slika-zaslona-2025-03-19-u-14.24.31.png?rlkey=6wc4es0tslni6xe9we651wmz5&st=eh0u6986&raw=1" alt="After Cleaning 2">
+                            <span class="label">Poslije</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-container" onclick="flipCard(this)">
+                    <div class="flip-box">
+                        <div class="flip-front">
+                            <img src="https://www.dropbox.com/scl/fi/z0pnwx7e93wtmyz6975ay/roletne_prije.jpg?rlkey=yz1wmc5vjc0xh05uwmo6j2sjy&st=kvfarx47&raw=1" alt="Before Cleaning 2">
+                            <span class="label">Prije</span>
+                        </div>
+                        <div class="flip-back">
+                            <img src="https://www.dropbox.com/scl/fi/7hbkduarh5nkzlpw97ewa/roletne_poslije.jpg?rlkey=gh9w1tl08w6easike675ojdgs&st=vvtz3kpf&raw=1" alt="After Cleaning 2">
+                            <span class="label">Poslije</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-container" onclick="flipCard(this)">
+                    <div class="flip-box">
+                        <div class="flip-front">
+                            <img src="https://www.dropbox.com/scl/fi/nzpa8o2qlb4xcncr9oj1x/balkon_prije.JPG?rlkey=2daofr025stqq1y5mzo8q7w5w&st=2g383i9a&raw=1" alt="Before Cleaning 2">
+                            <span class="label">Prije</span>
+                        </div>
+                        <div class="flip-back">
+                            <img src="https://www.dropbox.com/scl/fi/1gw2t4h7q0mh3cukcjvcv/balkon_poslije.JPG?rlkey=7uu1lvwm45t7c2pawfp83cfvn&st=evdb2p5n&raw=1" alt="After Cleaning 2">
+                            <span class="label">Poslije</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-container" onclick="flipCard(this)">
+                    <div class="flip-box">
+                        <div class="flip-front">
+                            <img src="https://www.dropbox.com/scl/fi/yptyufi5jyc427qtedmld/kada_prije.jpg?rlkey=10v7bk107tfrtbylpqed4kypp&st=71wjb5io&raw=1" alt="Before Cleaning 2">
+                            <span class="label">Prije</span>
+                        </div>
+                        <div class="flip-back">
+                            <img src="https://www.dropbox.com/scl/fi/v64vch1fxwm5tis9b7tly/kada_poslije.jpg?rlkey=yhos3b5g0myofzlsdk9lo80fc&st=9hlle7qc&raw=1" alt="After Cleaning 2">
+                            <span class="label">Poslije</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-container" onclick="flipCard(this)">
+                    <div class="flip-box">
+                        <div class="flip-front">
+                            <img src="https://www.dropbox.com/scl/fi/2uhgtte6w6uuczu9qiksp/frizider_prije.jpg?rlkey=o2x1vhdn4lkprm1fod6o88jaz&st=vpzq2tgb&raw=1" alt="Before Cleaning 2">
+                            <span class="label">Prije</span>
+                        </div>
+                        <div class="flip-back">
+                            <img src="https://www.dropbox.com/scl/fi/vlrbg6jf1yp9xw826x988/frizider_poslije.jpg?rlkey=6yxmbkfqqrvyr1cg0srnsrcsv&st=dhtao7ot&raw=1" alt="After Cleaning 2">
+                            <span class="label">Poslije</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-container" onclick="flipCard(this)">
+                    <div class="flip-box">
+                        <div class="flip-front">
+                            <img src="slikepepeljuga/koloprije.JPG" alt="Before Cleaning 2">
+                            <span class="label">Prije</span>
+                        </div>
+                        <div class="flip-back">
+                            <img src="https://www.dropbox.com/scl/fi/5zghazf7qrjzc9909osrp/koloposlije.JPG?rlkey=766knfw5yb6w2lkkx1dvumkgy&st=jllzyvzz&raw=1" alt="After Cleaning 2">
+                            <span class="label">Poslije</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="tekst">
+            <h3><li>Kvaliteta – Preciznost i vrhunski standardi čišćenja</li></h3>
+            <h3><li>Profesionalnost – Pouzdan i stručan tim za čišćenje</li></h3>
+            <h3><li>Diskrecija – Poštujemo privatnost i povjerljivost klijenata</li></h3>
+            <h3><li>Detaljno čišćenje – Fokus na svaki kutak i svaki detalj</li></h3>
+        </section>
+
+        <section id="gallery" class="gallery-section">
+            <h2>Galerija</h2>
+            <div class="gallery-grid">
+                <img src="https://www.dropbox.com/scl/fi/ivqgl5azcr9qc891cdtz1/096.JPG?rlkey=5g5zdzsgjtsc9qm2acrx7tzyx&st=4ly2ktm5&raw=1" alt="Fridge After" onclick="openLightbox(0)">
+                <img src="https://www.dropbox.com/scl/fi/i3vtmt2k4wx3g21xd4ie6/sudoper_poslije.jpg?rlkey=eefwcm61y9um054agigtrct6v&st=6z4rjr52&raw01" alt="Fridge After" onclick="openLightbox(1)">
+                <img src="https://www.dropbox.com/scl/fi/1cjm2qoosz46ht8hjgi9q/frizider2.jpg?rlkey=k1h2i4aggy09mvzz0oo6hs26r&st=qiojiqk9&raw=1" alt="Bathtub Before" onclick="openLightbox(2)">
+                <img src="https://www.dropbox.com/scl/fi/vlrbg6jf1yp9xw826x988/frizider_poslije.jpg?rlkey=6yxmbkfqqrvyr1cg0srnsrcsv&st=dhtao7ot&raw=1" alt="Bathtub After" onclick="openLightbox(3)">
+                <img src="https://www.dropbox.com/scl/fi/5o77waidnmuok6x18gdj1/412b4c7a-4689-43f4-a1c3-66c75742e6da-2.JPG?rlkey=xkdv8aykvym7zenuk7hy0wxr3&st=v2ayk3ox&raw=1" alt="" onclick="openLightbox(4)">
+                <img src="https://www.dropbox.com/scl/fi/5zghazf7qrjzc9909osrp/koloposlije.JPG?rlkey=766knfw5yb6w2lkkx1dvumkgy&st=jllzyvzz&raw=1" alt="" onclick="openLightbox(5)">
+                <img src="https://www.dropbox.com/scl/fi/1gw2t4h7q0mh3cukcjvcv/balkon_poslije.JPG?rlkey=7uu1lvwm45t7c2pawfp83cfvn&st=evdb2p5n&raw=1" alt="" onclick="openLightbox(6)">
+                <img src="slikepepeljuga/019.JPG" alt="" onclick="openLightbox(7)">
+                <img src="https://www.dropbox.com/scl/fi/dzo0n5nh5hyr15aev15zb/7dccfa42-984e-4f1f-a2d1-7c8bab0a7e5b-2.JPG?rlkey=1sj6lo90rypq53xfmfy398na3&st=4ys2lbob&raw=1" alt="" onclick="openLightbox(8)">
+                <img src="https://www.dropbox.com/scl/fi/lpoyfxpu0amdauvjjezep/34c56d2a-5350-44e8-bfc7-86417a624dda-2.JPG?rlkey=dgrklpczwrhmhkfg277jtp9bd&st=tdfh7xxw&raw=1" alt="" onclick="openLightbox(9)">
+                <img src="https://www.dropbox.com/scl/fi/s5iftzm7jitt7izbw4kcx/3772be93-3374-47c9-bf14-c6ac547b12af-2.JPG?rlkey=ptbyen6wsmu3bs5f5cvdm29mx&st=hy4tbm83&raw=1" alt="" onclick="openLightbox(10)">
+                <img src="slikepepeljuga/0803514f-df84-42d0-b190-74bff569dca9 2.JPG" alt="" onclick="openLightbox(11)">
+                <img src="https://www.dropbox.com/scl/fi/sjbf65xngvso5i012cv8t/197.JPG?rlkey=vdusep8r4clhompqbqajrh3v6&st=1yrgx6fm&raw=1" alt="" onclick="openLightbox(12)">
+                <img src="https://www.dropbox.com/scl/fi/s41aelg5he13wa49v0qo2/198.JPG?rlkey=q0edx8547t4q4nf8hnsauexub&st=707zlk6k&raw=1" alt="" onclick="openLightbox(13)">
+                <img src="https://www.dropbox.com/scl/fi/39nmm4jjdsn77csireypm/img1.jpg?rlkey=m0feoadlwajdaq1gkx21l1mx3&st=2qtwfewc&raw=1" alt="" onclick="openLightbox(14)">
+                <img src="slikepepeljuga/026.JPG" alt="" onclick="openLightbox(15)">
+                <img src="https://www.dropbox.com/scl/fi/cr8h03ttj3afal4tgq3w4/brod8.JPG?rlkey=6itlme6p3hxauufpr4rjrpqzf&st=trcy4456&raw=1" alt="" onclick="openLightbox(16)">
+                <img src="https://www.dropbox.com/scl/fi/rlwjjj0bqkrihl5a2shw7/051.JPG?rlkey=wd4b9i3b3pxco90m8sn3u0h53&st=2ikmmqk1&raw=1" alt="" onclick="openLightbox(17)">
+                <img src="https://www.dropbox.com/scl/fi/1ccka70a9qwiwt9gjrqaz/032.JPG?rlkey=z7cor52bcdrjyiazeeymytfig&st=ar426dvm&raw=1" alt="" onclick="openLightbox(18)">
+                <img src="https://www.dropbox.com/scl/fi/pb9uscn9fo77j3asnwoqe/brod1.JPG?rlkey=bp28qkuiocdayi47nedcwgc7j&st=b7e7t5hi&raw=1" alt="" onclick="openLightbox(19)">
+                <img src="https://www.dropbox.com/scl/fi/txwcnpk1jk8s4dzh0erq0/brod3.JPG?rlkey=yztl0yoyv2a0v7vr5g7xxa6x5&st=8ydbhqwv&raw=1" alt="" onclick="openLightbox(20)">
+                <img src="https://www.dropbox.com/scl/fi/k82ynt5finpmt4fnhhgps/brod7.JPG?rlkey=7ql9zpgde7mn511eaupxt3hhy&st=pk11gva2&raw=1" alt="" onclick="openLightbox(21)">     
+                <img src="https://www.dropbox.com/scl/fi/k6s227uzbya7696pytdez/266.JPG?rlkey=532hovjwlkemj5b2z9i9fanfv&st=woamnql4&raw=1" alt="" onclick="openLightbox(22)">
+                <img src="slikepepeljuga/brod5.JPG" alt="" onclick="openLightbox(23)">
+                <img src="https://www.dropbox.com/scl/fi/i2c2fl55gf33zsp7z8sks/afb826b0-7393-474a-b3c1-646ee770dba5-2.JPG?rlkey=roqwp2c2mju2kfyymb0d73ioz&st=lvyz4nya&raw=1" alt="" onclick="openLightbox(24)">
+                <img src="https://www.dropbox.com/scl/fi/novpn47lgeoptesqd81yz/img14.jpg?rlkey=bgivdln93i2gc6gfqtfy9punl&st=t47x8jne&raw=1" alt="" onclick="openLightbox(25)">
+                <img src="https://www.dropbox.com/scl/fi/rrgixojwson6bn8pl3t0q/img17.jpg?rlkey=tpftrfihagkm2nw70pkmniev1&st=d0v1kouy&raw=1" alt="" onclick="openLightbox(26)">
+                <img src="https://www.dropbox.com/scl/fi/drgl9iw0lgemuimv66i4v/052.JPG?rlkey=8r06dx20d4ms0njy5kgjfd0e0&st=nlqf4vkb&raw=1" alt="" onclick="openLightbox(27)">
+                <img src="https://www.dropbox.com/scl/fi/e57u5ene0i1myzv7rb2v7/142.JPG?rlkey=ftw41m2zlnkwn527awv0nofmt&st=opf6lnt3&raw=1" alt="" onclick="openLightbox(28)">     
+                <img src="https://www.dropbox.com/scl/fi/y8tfy9zg2ufs7g2ptqt9r/067.JPG?rlkey=4bzp97fa9e9kyzm8vwp1qvphe&st=sduymreh&raw=1" alt="" onclick="openLightbox(29)">     
+                <img src="https://www.dropbox.com/scl/fi/ncn4rnk89betifo18skwg/kupatilo_poslije.jpg?rlkey=tu5o6j1qb21catg1jwm5kwk8o&st=0naypwnk&raw=1" alt="" onclick="openLightbox(30)">
+                <img src="https://www.dropbox.com/scl/fi/hrllea06li7iddfhlzs12/pecnica_poslije.jpg?rlkey=5hi1hotmydf20o1a5334hb0mk&st=77lbybs8&raw=1" alt="" onclick="openLightbox(31)">
+                <img src="https://www.dropbox.com/scl/fi/7hbkduarh5nkzlpw97ewa/roletne_poslije.jpg?rlkey=gh9w1tl08w6easike675ojdgs&st=vvtz3kpf&raw=1" alt="" onclick="openLightbox(32)">
+                <img src="https://www.dropbox.com/scl/fi/x52a1jzva06x1dhhfpnpo/spaher_poslije.jpg?rlkey=2tplpbwi9ztjjuncbdche3ew0&st=79cot0e0&raw=1" alt="" onclick="openLightbox(33)">
+                <img src="https://www.dropbox.com/scl/fi/v64vch1fxwm5tis9b7tly/kada_poslije.jpg?rlkey=yhos3b5g0myofzlsdk9lo80fc&st=9hlle7qc&raw=1" alt="" onclick="openLightbox(34)">
+                <img src="https://www.dropbox.com/scl/fi/i3vtmt2k4wx3g21xd4ie6/sudoper_poslije.jpg?rlkey=eefwcm61y9um054agigtrct6v&st=6z4rjr52&raw=1" alt="" onclick="openLightbox(35)">     
+                <img src="https://www.dropbox.com/scl/fi/2af936uqqzoznmkuk265c/160.JPG?rlkey=9l8907n44kaiy1xlbrglqm9c1&st=raquaopg&raw=1" alt="" onclick="openLightbox(36)">     
+                <img src="https://www.dropbox.com/scl/fi/u4vlt4u0icxezyx81l3do/b54160a5-e624-4f1d-926c-58cf7b870cb2-2.JPG?rlkey=uem1zl375c5t7bn08zy9bursk&st=jusj3001&raw=1" alt="" onclick="openLightbox(37)">
+                <img src="https://www.dropbox.com/scl/fi/3et0l7kjmy69xdzm89xkl/c057fd04-3046-4da8-92f1-b74dfa9f5f7f-2.JPG?rlkey=6oub4pln2yx388df06loijle5&st=jb3608ac&raw=1" alt="" onclick="openLightbox(38)">
+                <img src="https://www.dropbox.com/scl/fi/kr7pp2wfk9cbrbkh6m7t8/2885a1c3-18ff-4d95-ba7d-9f9e46234c71-2.JPG?rlkey=3hz6uabpvoaz4wj3mb1wllmm3&st=opb2q5m4&raw=1" alt="" onclick="openLightbox(39)">
+                <img src="https://www.dropbox.com/scl/fi/mp0vi1k7cltol0g92jqd8/74c2b37e-1a98-48f7-a341-bb29ca7e2f8f-2.JPG?rlkey=fbr5e27svxnwowjkk385n32uk&st=8srjrtxw&raw=1" alt="" onclick="openLightbox(40)">
+                <img src="https://www.dropbox.com/scl/fi/ogev0xem625y139neuvo0/9da554a5-a89f-42d9-9f29-9cea17f79c77-2.JPG?rlkey=j0j3d30p08y4b4pgi81q6ox8e&st=cwzcrjci&raw=1" alt="" onclick="openLightbox(41)">
+                <img src="https://www.dropbox.com/scl/fi/fa1yuo0lj7maweqwo2y4b/020.JPG?rlkey=zcvk6198kcdgihtz2t6lmh2qj&st=lqkywwhq&raw=1" alt="" onclick="openLightbox(42)">
+                <img src="https://www.dropbox.com/scl/fi/9g5e34lwrmijwvtvrp7sh/084.JPG?rlkey=ds0lxid6ch9jngzg1lm1fkd2i&st=lkxjsals&raw=1" alt="" onclick="openLightbox(43)">     
+                <img src="https://www.dropbox.com/scl/fi/6hy46ndelwqx56mzimlk5/077.JPG?rlkey=9if9wl6knciar91mnxsoufnu0&st=2l9cs6tx&raw=1" alt="" onclick="openLightbox(44)">
+                <img src="https://www.dropbox.com/scl/fi/769b0mompnn4z9s2xd1qr/e11dbf2c-0390-4aec-a8f0-1062a1fd7a50-2.JPG?rlkey=4tuhedxk9vy7yixouhrj6am6g&st=gevzmuq3&raw=1" alt="" onclick="openLightbox(45)">
+                <img src="https://www.dropbox.com/scl/fi/tx124im3vsqgylcek2nil/b55ae2b1-8f54-4faf-bca6-3f9d7f98e6e9.JPG?rlkey=a34xcjjpd0xml38ow4ooyrf8j&st=obq5n5pj&raw=1" alt="" onclick="openLightbox(46)">
+                <img src="https://www.dropbox.com/scl/fi/uaenr90gove1xzcp1o379/prozor_poslije.png?rlkey=wrilqa6e5o5drk9xm681h2q64&st=bp8yui9s&raw=1" alt="" onclick="openLightbox(47)">
+                <img src="https://www.dropbox.com/scl/fi/zsj97g4exprjegwqy1tp5/Slika-zaslona-2025-03-19-u-14.24.52.png?rlkey=iwoq5wmugaf24f03babligqtq&st=cwy2ekrg&raw=1" alt="" onclick="openLightbox(48)">
+                <img src="https://www.dropbox.com/scl/fi/99t29g0x7st40xszv2eed/Slika-zaslona-2025-03-19-u-14.24.31.png?rlkey=6wc4es0tslni6xe9we651wmz5&st=q98siw8k&raw=1" alt="" onclick="openLightbox(49)">
+                <img src="https://www.dropbox.com/scl/fi/qbonu2sn6koy8n512xbtx/136.JPG?rlkey=xvwuwipyz208c191nz2kl1ro9&st=kqjgpn8q&raw=1" alt="" onclick="openLightbox(50)">
+                <img src="https://www.dropbox.com/scl/fi/rue9zr2s1kyxvk7ym81o6/PHOTO-2025-03-01-17-27-00.jpg?rlkey=xfjxif9ziuqzhke8svziuleed&st=79584359&raw=1" alt="" onclick="openLightbox(51)">
+            </div>
+
+            <!-- Lightbox -->
+            <div id="lightbox" class="lightbox">
+                <span class="close" onclick="closeLightbox()">&times;</span>
+                <img id="lightbox-img" src="" alt="">
+                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                <button class="next" onclick="changeSlide(1)">&#10095;</button>
+            
+            </div>
+        </section>
+        <section id="contact" class="contact">
+            <h2>Kontaktirajte nas</h2>
+            <p>Za dodatna pitanja javite se na: </p>
+            <a href="mailto:pepeljuga.st@gmail.com"><button>Email</button></a>
+                <br> <b>Phone: +385 91 563 3740 </b></p>
+        </section>
+        
+        <footer>
+            <p>&copy; 2025 Pepeljuga. All rights reserved.</p>
+        </footer>
+        
+        <script src="script.js"></script>
+    </body>
+</html>
